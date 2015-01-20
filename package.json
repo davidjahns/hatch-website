@@ -16,6 +16,7 @@
     "grunt-contrib-less": "~0.11.4",
     "grunt-contrib-imagemin": "0.8.1",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-exec": "~0.4.2",
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~2.4.0",
     "grunt-mocha": "~0.4.11",
@@ -24,7 +25,11 @@
     "load-grunt-tasks": "~0.6.0",
     "matchdep": "~0.3.0",
     "time-grunt": "~1.0.0",
-    "jshint-stylish": "~1.0.0"
+    "jshint-stylish": "~1.0.0",
+    "mocha": "*",
+    "expect.js": "*",
+    "eve": "~0.4.2",
+    "dr.js": "~0.1.0"
   },
   "engines": {
     "node": ">=0.8.0"

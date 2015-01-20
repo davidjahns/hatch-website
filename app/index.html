@@ -14,15 +14,39 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <!-- build:js scripts/vendor/snap.svg-min.js -->
+    <script src="scripts/classie.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/snap.svg-min.js -->
+    <script src="bower_components/Snap.svg/dist/snap.svg-min.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
+    <div class="top-bar"></div>
     <div class="container-fluid">
-      <div id="content-wrapper">
-        <nav>
-          <!-- nav stuff here -->
-        </nav>
 
-        <!-- main wrapped content below -->
+      <nav id="menu" class="menu">
+        <button class="menu__handle"><span>Menu</span></button>
+        <div class="menu__inner">
+          <ul>
+            <li><a href="#head"><i class="fa fa-fw fa-home"></i><span>Home<span></a></li>
+            <li><a href="#about"><i class="fa fa-fw fa-heart"></i><span>About<span></a></li>
+            <li><a href="#work"><i class="fa fa-fw fa-folder"></i><span>Work<span></a></li>
+            <li><a href="#featured"><i class="fa fa-fw fa-folder"></i><span>Featured<span></a></li>
+            <li><a href="#contact"><i class="fa fa-fw fa-tachometer"></i><span>Contact<span></a></li>
+          </ul>
+        </div>
+        <div class="morph-shape" data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410" data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410">
+          <svg width="100%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
+            <path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410"/>
+          </svg>
+        </div>
+      </nav>
+
+
+      <!-- main wrapped content below -->
+
+      <div class="main" id="content-wrapper">
 
 
         <!-- head -->
@@ -44,15 +68,18 @@
             <div class="col-sm-8 content-wrap">
               <h2>About Hatch</h2>
               <p>Drinking vinegar sriracha single-origin coffee, Kickstarter 8-bit meh Neutra skateboard. Keytar Marfa Neutra, kogi put a bird on it tousled trust fund meggings whatever Tumblr fashion axe banh mi XOXO Echo Park yr. Quinoa fingerstache paleo, migas letterpress Tumblr forage whatever Pitchfork DIY twee banjo flexitarian squid. Synth umami polaroid, shabby chic distillery bicycle rights farm-to-table mixtape put a bird on it mumblecore. Fixie pop-up slow-carb fingerstache, banh mi farm-to-table normcore semiotics synth sartorial. Post-ironic bicycle rights tofu, PBR&B pour-over mustache chambray taxidermy. Pinterest pug forage literally actually.</p>
+
+              <p>Drinking vinegar sriracha single-origin coffee, Kickstarter 8-bit meh Neutra skateboard. Keytar Marfa Neutra, kogi put a bird on it tousled trust fund meggings whatever Tumblr fashion axe banh mi XOXO Echo Park yr. Quinoa fingerstache paleo, migas letterpress Tumblr forage whatever Pitchfork DIY twee banjo flexitarian squid. Synth umami polaroid, shabby chic distillery bicycle rights farm-to-table mixtape put a bird on it mumblecore. Fixie pop-up slow-carb fingerstache, banh mi farm-to-table normcore semiotics synth sartorial. Post-ironic bicycle rights tofu, PBR&B pour-over mustache chambray taxidermy. Pinterest pug forage literally actually.</p>
             </div>
 
             <!-- cool image here dawg -->
             <div class="col-sm-4 hidden-xs">
-              <img src="http://placehold.it/500x650" class="img-responsive">
+              <img src="images/about-photo2.jpeg" class="img-responsive">
             </div>
 
           </div>
         </section>
+
 
 
 
@@ -62,30 +89,56 @@
             <h2>Stuff We've Created</h2>
             <div class="row">
               <div class="col-sm-4">
-                <img src="http://placehold.it/400x400" class="img-responsive">
+                <img src="http://placehold.it/1000x1000" class="img-responsive">
               </div>
               <div class="col-sm-4">
-                <img src="http://placehold.it/400x400" class="img-responsive">
+                <img src="http://placehold.it/1000x1000" class="img-responsive">
               </div>
               <div class="col-sm-4">
-                <img src="http://placehold.it/400x400" class="img-responsive">
+                <img src="http://placehold.it/1000x1000" class="img-responsive">
               </div>
             </div>
 
             <div class="row">
               <div class="col-sm-4">
-                <img src="http://placehold.it/400x400" class="img-responsive">
+                <img src="http://placehold.it/1000x1000" class="img-responsive">
               </div>
               <div class="col-sm-4">
-                <img src="http://placehold.it/400x400" class="img-responsive">
+                <img src="http://placehold.it/1000x1000" class="img-responsive">
               </div>
               <div class="col-sm-4">
-                <img src="http://placehold.it/400x400" class="img-responsive">
+                <img src="http://placehold.it/1000x1000" class="img-responsive">
               </div>
             </div>
 
           </div>
         </section>
+
+
+
+        <section id="featured">
+
+          <div class="row">
+            <div class="col-sm-12">    
+              <img src="http://placehold.it/1500x700" class="img-responsive">
+            </div>
+          </div>
+
+
+
+        </section>
+
+
+
+        <section id="contact">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1>CONTACT STUFF HERE</h1>
+            </div>
+          </div>
+
+        </section>
+
 
 
 
