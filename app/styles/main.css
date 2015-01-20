@@ -7376,13 +7376,13 @@ a:focus {
 #featured img {
   padding: 50px;
 }
-#work {
+#projects {
   background: #e0e0e0;
 }
-#work .content-wrap .row {
+#projects .content-wrap .row {
   margin-bottom: 30px;
 }
-#work h2 {
+#projects h2 {
   margin-top: 0;
   margin-bottom: 30px;
   text-align: center;
