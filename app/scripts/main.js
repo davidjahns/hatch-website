@@ -1,4 +1,4 @@
-console.log('\'Allo \'Allo!');
+console.log('\'Allo \'Allo! main.js');
 
 
 
@@ -52,3 +52,13 @@ console.log('\'Allo \'Allo!');
     new SVGMenu( document.getElementById( 'menu' ) );
  
 })();
+
+
+
+var href = $('nav a').click().attr('href');
+
+
+$('a[href="'+href+'"]').click(function() {
+    console.log(href);
+    //$(href).animatescroll();
+})

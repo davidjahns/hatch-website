@@ -7295,129 +7295,12 @@ td.visible-print {
 .fa-plus-square-o:before {
   content: "\f196";
 }
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-.jumbotron {
-  margin: 50px auto 0 auto;
-}
-body {
-  background: #eeeeee;
-  color: #424242;
-  font-style: sans-serif;
-  font-size: 16px;
-  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 900;
-}
-a,
-a:hover,
-a:focus {
-  color: #2d3e50;
-  text-decoration: none;
-}
-#content-wrapper {
-  margin: 0 auto;
-  padding-top: 80px;
-}
-.content-wrap {
-  padding: 50px;
-}
-.top-bar {
-  height: 80px;
-  width: 100%;
-  display: block;
-  position: fixed;
-  background: #eeeeee;
-  z-index: 100;
-  opacity: 0.99;
-}
-#head {
-  background: #2d3e50;
-  color: #fff;
-  padding: 50px;
-  text-align: center;
-}
-#head .hatch-logo {
-  max-width: 450px;
-  margin: 0 auto;
-}
-#head h1 {
-  font-family: 'museo-slab', sans-serif;
-  font-weight: 500;
-  font-size: 56px;
-}
-#head h3 {
-  font-weight: 300;
-}
-@media (max-width: 490px) {
-  #head h1 {
-    font-size: 32.2px;
-  }
-}
-#about {
-  background: #fff;
-}
-#featured {
-  background: #fff;
-}
-#featured img {
-  padding: 50px;
-}
-#projects {
-  background: #e0e0e0;
-}
-#projects .content-wrap .row {
-  margin-bottom: 30px;
-}
-#projects h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  #work img {
-    margin-top: 25px;
-  }
-}
-#contact {
-  background: #9e9e9e;
-}
-#social {
-  background: #2d3e50;
-  color: #fff;
-}
-#social .fa {
-  display: block;
-  text-align: center;
-  font-size: 24px;
-}
-footer {
-  text-align: center;
-  padding: 50px;
-}
-footer .hatch-text {
-  font-family: 'museo-slab', sans-serif;
-  text-transform: uppercase;
-}
 .menu {
   position: fixed;
   width: 300px;
   top: 3em;
   bottom: 3em;
-  left: 0;
+  left: -25px;
   z-index: 100;
   overflow: hidden;
   -webkit-transform: translate3d(-150px, 0, 0);
@@ -7435,12 +7318,12 @@ footer .hatch-text {
   transition: opacity 0.6s;
 }
 .menu.menu--open + .main {
-  opacity: 0.1;
+  opacity: 0.03;
   pointer-events: none;
 }
 .menu__inner {
   width: calc(125%);
-  padding: 0 140px 2em 0;
+  padding: 0 140px 2em 5em;
   overflow-y: auto;
   height: 100%;
   position: relative;
@@ -7479,17 +7362,24 @@ footer .hatch-text {
   outline: none;
 }
 .menu ul li .fa {
-  font-size: 2.5em;
-  display: block;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding-right: 10px;
+  display: inline-block;
   margin: 0 auto;
   color: #424242;
 }
 .menu ul li span {
-  font-weight: bold;
-  font-size: 0.75em;
+  font-weight: 300;
+  font-size: 1.5em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: block;
+  display: inline-block;
   text-align: center;
+  text-transform: uppercase;
+}
+.menu ul li a:hover span,
+.menu ul li a:hover .fa {
+  color: #527191;
 }
 .menu__handle {
   background: transparent;
@@ -7574,5 +7464,322 @@ footer .hatch-text {
   .menu.menu--open + .main {
     opacity: 0.05;
   }
+}
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  max-width: 400px;
+  width: calc(98%);
+  vertical-align: top;
+}
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+.input__field:focus {
+  outline: none;
+}
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+.icon {
+  color: #ddd;
+  font-size: 150%;
+}
+/* Individual styles */
+/* Kaede */
+.input--kaede {
+  display: block;
+  overflow: hidden;
+  margin: 1em auto 2em;
+  background: #EFEEEE;
+}
+.input__field--kaede {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 60%;
+  height: 100%;
+  background: #fff;
+  color: #9DABBA;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.input__label--kaede {
+  z-index: 10;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  cursor: text;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.input__label-content--kaede {
+  padding: 1.5em 0;
+}
+.input__field--kaede:focus,
+.input--filled .input__field--kaede {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition-delay: 0.06s;
+  transition-delay: 0.06s;
+}
+.input__field--kaede:focus + .input__label--kaede,
+.input--filled .input__label--kaede {
+  -webkit-transform: translate3d(60%, 0, 0);
+  transform: translate3d(60%, 0, 0);
+  pointer-events: none;
+}
+@media screen and (max-width: 34em) {
+  .input__field--kaede:focus + .input__label--kaede,
+  .input--filled .input__label--kaede {
+    -webkit-transform: translate3d(65%, 0, 0) scale3d(0.65, 0.65, 1);
+    transform: translate3d(65%, 0, 0) scale3d(0.65, 0.65, 1);
+    pointer-events: none;
+  }
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.jumbotron {
+  margin: 50px auto 0 auto;
+}
+body {
+  background: #eeeeee;
+  color: #424242;
+  font-style: sans-serif;
+  font-size: 16px;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 900;
+}
+h2 {
+  padding-bottom: 15px;
+}
+a,
+a:hover,
+a:focus {
+  color: #2d3e50;
+  text-decoration: none;
+}
+#content-wrapper {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.content-wrap {
+  padding: 50px;
+}
+.top-bar {
+  height: 80px;
+  width: 100%;
+  display: block;
+  position: fixed;
+  background: #eeeeee;
+  z-index: 100;
+  opacity: 0.99;
+}
+#home {
+  background: #2d3e50;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+#home .hatch-logo {
+  max-width: 450px;
+  margin: 0 auto;
+}
+#home h1 {
+  font-family: 'museo-slab', sans-serif;
+  font-weight: 500;
+  font-size: 56px;
+}
+#home h3 {
+  font-weight: 300;
+}
+@media (max-width: 490px) {
+  #home h1 {
+    font-size: 32.2px;
+  }
+}
+#about {
+  background: #fff;
+}
+#about .content-wrap {
+  margin-left: -15px;
+}
+#about .content-wrap hr {
+  margin: 50px auto;
+  width: 80%;
+}
+.services {
+  text-align: center;
+}
+.services div {
+  padding-bottom: 25px;
+}
+#featured {
+  background: #fff;
+}
+#featured img {
+  padding: 50px;
+}
+#projects {
+  background: #e0e0e0;
+  text-align: center;
+}
+#projects .content-wrap .row {
+  margin-bottom: 30px;
+}
+#projects h2 {
+  margin-top: 0;
+}
+.project-info {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  padding: 50px;
+  overflow: hidden;
+}
+.project-info p {
+  padding: 25px 0;
+}
+@media (max-width: 768px) {
+  #projects img {
+    margin-top: 25px;
+  }
+}
+#contact {
+  background: #9e9e9e;
+}
+#contact hr {
+  border-color: #424242;
+  width: 80%;
+  margin: 50px 0;
+}
+.contact-info {
+  padding-bottom: 50px;
+}
+.contact-info .fa {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+}
+.contact-info p {
+  line-height: 32px;
+}
+.contact-info a {
+  color: #424242;
+}
+.contact-info a:hover {
+  color: #fff;
+}
+.contact-form {
+  background: #e0e0e0;
+  padding: 20px;
+}
+.contact-form input,
+.contact-form label {
+  text-transform: uppercase;
+  color: #424242;
+}
+.contact-form .text-area-wrap label {
+  background: #eeeeee;
+  margin-bottom: 0;
+}
+.contact-form .text-area-wrap textarea {
+  border: none;
+  border-radius: 0;
+}
+.contact-form button {
+  background: #2d3e50;
+  color: #fff;
+  border-radius: 20px;
+  padding: 7px 30px;
+  display: block;
+}
+.contact-form button:hover,
+.contact-form button:focus {
+  color: #e0e0e0;
+}
+#social {
+  background: #2d3e50;
+  color: #fff;
+}
+#social .fa {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+}
+#social a {
+  color: #fff;
+}
+#social a:hover {
+  color: #e0e0e0;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+}
+footer .hatch-text {
+  font-family: 'museo-slab', sans-serif;
+  text-transform: uppercase;
+  line-height: 33px;
 }
 /*# sourceMappingURL=/styles/main.css.map */

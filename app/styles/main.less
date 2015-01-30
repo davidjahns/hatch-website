@@ -4,6 +4,9 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
+@import "sidebar.less";
+@import "inputs.less";
+
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
 
 
@@ -25,6 +28,8 @@
 @base-font-size: 14px;
 
 @font-color: #424242; //800 
+
+@font-color-dark: #212121; //900
 
 //end variables
 
@@ -50,6 +55,7 @@
 
 
 //GLOBAL STYLES
+///////////////////////////////////////////////////
 body {
 	background: @grey-lighter;
 	color: @font-color;
@@ -70,13 +76,18 @@ h6 {
 	font-weight: 900;
 }
 
+h2 {
+	//font-weight: 300;
+	padding-bottom: 15px;
+}
+
 a, a:hover, a:focus {
 	color: @primary;
 	text-decoration: none;
 }
 
 #content-wrapper {
-	//max-width: 1290px;
+	max-width: 1290px;
 	margin: 0 auto;
 	padding-top: 80px;
 }
@@ -87,12 +98,15 @@ a, a:hover, a:focus {
 	//margin: 0 auto;
 }
 
-//end global styles
+/////end global styles
+
+
+
 
 
 
 //HEADER / LOGO SECTION
-//
+///////////////////////////////////////////////////
 
 .top-bar {
 	height: 80px;
@@ -104,8 +118,19 @@ a, a:hover, a:focus {
 	opacity: 0.99;
 }
 
+@media (max-width: 768px) {
+	.top-bar {
+		//height: 50px;
+	}
 
-#head {
+	.content-wrapper {
+		//padding-top: 50px;
+	}
+
+}
+
+
+#home {
 	background: @primary;
 	color: #fff;
 	padding: 50px;
@@ -127,10 +152,10 @@ a, a:hover, a:focus {
 	}
 
 }
-//end .head wrapper
+//end #home wrapper
 
 @media (max-width: 490px){
-	#head {
+	#home {
 		h1 {
 			font-size: @base-font-size * 2.3;
 		}
@@ -140,17 +165,38 @@ a, a:hover, a:focus {
 
 
 //ABOUT SECTION
-//
+///////////////////////////////////////////////////
 #about {
 	background: #fff;
+
+	.content-wrap {
+		margin-left: -15px;
+	}
+
+	.content-wrap hr {
+		margin: 50px auto;
+		width: 80%;
+
+	}
 
 
 }
 //end .about wrapper
 
+.services {
+	text-align: center;
+
+	div {
+		padding-bottom: 25px;
+	}
+}
+
+
+
+
 
 //FEATURED WORK SECTION
-//
+///////////////////////////////////////////////////
 
 #featured {
 	background: #fff;
@@ -161,10 +207,15 @@ a, a:hover, a:focus {
 }
 
 
+
+
+
+
 //WORK SECTION
-//
+///////////////////////////////////////////////////
 #projects {
 	background: @grey-light;
+	text-align: center;
 
 
 	.content-wrap {
@@ -175,15 +226,24 @@ a, a:hover, a:focus {
 
 	h2 {
 		margin-top: 0;
-		margin-bottom: 30px;
-		text-align: center;
-		//font-size: @base-font-size * 3;
 
 	}
 }
 
+.project-info {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	padding: 50px;
+	overflow: hidden;
+
+	p {
+		padding: 25px 0;
+	}
+}
+
 @media (max-width: 768px) {
-	#work {
+	#projects {
 		img {
 			margin-top: 25px;
 		}
@@ -192,19 +252,98 @@ a, a:hover, a:focus {
 //end work section
 
 
-//STUFF WE LIKE SECTION
-//
+
+
+
+
+//CONTACT SECTION
+///////////////////////////////////////////////////
 
 #contact {
 	background: @grey;
 	//color: #fff;
 
+	h2 {
+		//color: #fff;
+	}
+
+	hr {
+		border-color: @font-color;
+		width: 80%;
+		margin: 50px 0;
+	}
+
+}
+
+.contact-info {
+	padding-bottom: 50px;
+
+	.fa {
+		display: block;
+		text-align: center;
+		font-size: 32px;
+	}
+
+	p {
+		line-height: 32px;
+	}
+
+	a {
+		color: @font-color;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+.contact-form {
+	background: @grey-light;
+	padding: 20px;
+
+
+	input, label {
+		text-transform: uppercase;
+		color: @font-color;
+	}
+
+	.text-area-wrap {
+
+		label {
+			background: @grey-lighter;
+			margin-bottom: 0;
+		}
+
+		textarea {
+			border: none;
+			border-radius: 0;
+		}
+	}
+
+	button {
+		background: @primary;
+		color: #fff;
+		border-radius: 20px;
+		padding: 7px 30px;
+		display: block;
+
+
+		&:hover, &:focus {
+			color: @grey-light;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	
 }
 
 
 
+
+
 //SOCIAL SECTION
-//
+///////////////////////////////////////////////////
 #social {
 	background: @primary;
 	color: #fff;
@@ -214,232 +353,36 @@ a, a:hover, a:focus {
 		text-align: center;
 		font-size: 24px;
 	}
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: @grey-light;
+		}
+	}
 }
 
 
 
+
+
 //FOOTER SECTION
-//
+///////////////////////////////////////////////////
 footer {
 	//color: @primary;
 	text-align: center;
-	padding: 50px;
+	padding: 25px;
 
 	.hatch-text {
 		font-family: 'museo-slab', sans-serif;
 		text-transform: uppercase;
+		line-height: 33px;
 	}
 }
 //end footer wrapper
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//Sidebar snap.svg css copied and pasted. 
-//
-.menu {
-	position: fixed;
-	width: 300px;
-	top: 3em;
-	bottom: 3em;
-	left: 0;
-	z-index: 100;
-	overflow: hidden;
-	-webkit-transform: translate3d(-150px, 0, 0);
-	transform: translate3d(-150px, 0, 0);
-	-webkit-transition: -webkit-transform 0.6s;
-	transition: transform 0.6s;
-	margin-top: -25px;
-}
-
-.menu.menu--open {
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
-.main {
-	-webkit-transition: opacity 0.6s;
-	transition: opacity 0.6s;
-}
-
-.menu.menu--open + .main {
-	opacity: 0.1;
-	pointer-events: none;
-}
-
-.menu__inner {
-	width: calc(100% + 25px);
-	padding: 0 140px 2em 0;
-	overflow-y: auto;
-	height: 100%;
-	position: relative;
-	z-index: 100;
-}
-
-.menu ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.menu ul li {
-	margin: 0 0 2em 0;
-	-webkit-transform: translate3d(-150px, 0, 0);
-	transform: translate3d(-150px, 0, 0);
-	-webkit-transition: -webkit-transform 0.6s;
-	transition: transform 0.6s;
-}
-
-.menu.menu--anim ul li {
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
-.menu ul li:first-child {
-	-webkit-transition-delay: 0.3s;
-	transition-delay: 0.3s;
-}
-
-.menu ul li:nth-child(2) {
-	-webkit-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-}
-
-.menu ul li:nth-child(3) {
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
-}
-
-.menu ul li a {
-	display: block;
-	outline: none;
-}
-
-.menu ul li .fa {
-	font-size: 2.5em;
-	display: block;
-	margin: 0 auto;
-	color: @font-color;
-}
-
-.menu ul li span {
-	font-weight: bold;
-	font-size: 0.75em;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	display: block;
-	text-align: center;
-}
-
-.menu__handle {
-	background: transparent;
-	border: none;
-	width: 30px;
-	height: 24px;
-	padding: 0;
-	outline: none;
-	position: absolute;
-	top: 3px;
-	right: 0px;
-	z-index: 2000;
-}
-
-.menu__handle::before,
-.menu__handle::after,
-.menu__handle span {
-	background: @font-color;
-}
-
-.menu__handle::before,
-.menu__handle::after {
-	content: '';
-	position: absolute;
-	height: 2px;
-	width: 100%;
-	left: 0;
-	top: 50%;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	-webkit-transition: -webkit-transform 0.25s;
-	transition: transform 0.25s;
-}
-
-.menu__handle span {
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	left: 0;
-	overflow: hidden;
-	text-indent: 200%;
-	-webkit-transition: opacity 0.25s;
-	transition: opacity 0.25s;
-}
-
-.menu__handle::before {
-	-webkit-transform: translate3d(0, -10px, 0);
-	transform: translate3d(0, -10px, 0);
-}
-
-.menu__handle::after {
-	-webkit-transform: translate3d(0, 10px, 0);
-	transform: translate3d(0, 10px, 0);
-}
-
-.menu--open .menu__handle span {
-	opacity: 0;
-}
-
-.menu--open .menu__handle::before {
-	-webkit-transform: rotate3d(0, 0, 1, 45deg);
-	transform: rotate3d(0, 0, 1, 45deg);
-}
-
-.menu--open .menu__handle::after {
-	-webkit-transform: rotate3d(0, 0, 1, -45deg);
-	transform: rotate3d(0, 0, 1, -45deg);
-}
-
-.morph-shape {
-	position: absolute;
-	width: 240px;
-	height: 100%;
-	top: 0;
-	right: 0;
-}
-
-.morph-shape svg path {
-	stroke: @font-color;
-	stroke-width: 5px;
-	opacity: 0;
-}
-
-
-
-@media screen and (max-width: 63em) {
-	.main {
-		//padding: 0 2em;
-		-webkit-transition: opacity 0.6s;
-		transition: opacity 0.6s;
-	}
-
-	.menu {
-		-webkit-transform: translate3d(-170px, 0, 0);
-		transform: translate3d(-170px, 0, 0);
-	}
-
-	.menu.menu--open + .main {
-		opacity: 0.05;
-	}
-}
 
 
 
