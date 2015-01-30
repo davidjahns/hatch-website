@@ -6,6 +6,7 @@
 
 @import "sidebar.less";
 @import "inputs.less";
+@import "projects.less";
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
 
@@ -87,7 +88,7 @@ a, a:hover, a:focus {
 }
 
 #content-wrapper {
-	max-width: 1290px;
+	//max-width: 1290px;
 	margin: 0 auto;
 	padding-top: 80px;
 }
@@ -189,6 +190,13 @@ a, a:hover, a:focus {
 	div {
 		padding-bottom: 25px;
 	}
+
+	.fa {
+		font-size: 90px;
+		display: inline-block;
+		padding: 10px;
+		color: @primary;
+	}
 }
 
 
@@ -201,8 +209,12 @@ a, a:hover, a:focus {
 #featured {
 	background: #fff;
 
-	img {
-		padding: 50px;
+	h2 {
+		text-align: center;
+	}
+
+	.local-favs {
+		margin-top: 50px;
 	}
 }
 
@@ -268,7 +280,7 @@ a, a:hover, a:focus {
 	}
 
 	hr {
-		border-color: @font-color;
+		border-color: darken(@grey, 10%);
 		width: 80%;
 		margin: 50px 0;
 	}
