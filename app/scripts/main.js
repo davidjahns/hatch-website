@@ -1,5 +1,37 @@
 console.log('\'Allo \'Allo! main.js');
 
+/**
+ * This part causes smooth scrolling using scrollto.js
+ * We target all a tags inside the nav, and apply the scrollto.js to it.
+ */
+$("nav a").click(function(e){
+    e.preventDefault();
+    $('html,body').scrollTo($(this.hash).offset().top-80, 700); 
+    $('nav').removeClass('menu--anim').removeClass('menu--open');
+});
+
+//scrolling effects using animate.css and viewportchecker.js
+$(document).ready(function() {
+    $('.fade-scroll-section').addClass("hidden-scroll").viewportChecker({
+        classToAdd: 'visible-scroll animated fadeIn',
+        offset: 10,
+       });
+    jQuery('.hatch-logo').addClass("hidden-scroll").viewportChecker({
+        classToAdd: 'visible-scroll animated fadeInUp',
+        //offset: 50,
+       });
+    jQuery('#home h1').addClass("hidden-scroll").viewportChecker({
+        classToAdd: 'visible-scroll animated fadeInRight',
+        offset: -75,
+       });
+    jQuery('#home h3').addClass("hidden-scroll").viewportChecker({
+        classToAdd: 'visible-scroll animated fadeInLeft',
+        offset: -75,
+       });
+});
+
+
+
 
 
 //sidebar js for animating svg elasticity
@@ -52,13 +84,3 @@ console.log('\'Allo \'Allo! main.js');
     new SVGMenu( document.getElementById( 'menu' ) );
  
 })();
-
-
-
-var href = $('nav a').click().attr('href');
-
-
-$('a[href="'+href+'"]').click(function() {
-    console.log(href);
-    //$(href).animatescroll();
-})
